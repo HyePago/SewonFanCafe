@@ -71,4 +71,8 @@ try {
 } catch(Exception e) {
 	e.printStackTrace();
 }
+
+out.println("<script>");
+out.println("location.href('login.html')");
+out.println("</script>");
 %>
