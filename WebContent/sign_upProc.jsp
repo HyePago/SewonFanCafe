@@ -73,6 +73,6 @@ try {
 }
 
 out.println("<script>");
-out.println("location.href('login.html')");
+out.println("location.href='login.html';");
 out.println("</script>");
 %>

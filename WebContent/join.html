@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Generator" content="EditPlus">
+        <meta name="Author" content="HyejinKim">
+        <meta name="Keywords" content="dessert">
+        <meta name="Description" content="">
+        <link rel="stylesheet" href="css/mystyle.css">
+    </head>
+    <body>
+        <form action="joinProc.jsp" method="post">
+            <table width="500" class="join_out_table">
+                <tbody>
+                    <tr>
+                        <td> <div class="login_logo">카페 가입 홈</div></td>
+                    </tr>
+                    <tr height="2" bgcolor="#EF8556">
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table width="500" class="join_inner_table">
+                                <tbody>
+                                    <tr>
+                                        <th><label for="nickname">닉네임</label></th>
+                                        <td><input type="text" maxlength="17" name="nickname" id="nickname"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="reception">수신여부</label></th>
+                                        <td>
+                                            <input type="checkbox" name="mail" value="mail"> 전체 메일
+                                            <input type="checkbox" name="facing" value="facing"> 전체 쪽지
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th style="vertical-align: top;">주관식</th>
+                                        <td>
+                                            카페 이름 규칙을 확인해주세요 <br>
+                                            <input type="text" name="text"> <br>
+                                            <font color="gray">위의 질문은 카페지기(운영자)가 요구하는 정보입니다.</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="center">
+                                            <input type="submit" value="가입" class="join_submit">
+                                            <input type="reset" value="취소" class="join_submit">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

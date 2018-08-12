@@ -17,9 +17,19 @@
                 <nav>
                     <ul>
                         <li><a href="index.jsp">main</a></li> 
-                        <li><a href="join.html" target="main">카페 가입하기</a></li>
-                        <li><a href="login.html" target="main">로그인</a></li>
-                        <li><a href="sign_up.html" target="main">회원가입</a></li>
+                        <% 
+						if(((String)session.getAttribute("id")) == null || ((String)session.getAttribute("id")).equals("")) { %>
+                        	<li><a href="join.html" target="main">카페 가입하기</a></li>
+                     	<% } else { %>
+                        	<li><a href="secession.jsp" target="main">카페 탈퇴하기</a></li>
+                        <% 
+                     	}
+						if(((String)session.getAttribute("id")) == null || ((String)session.getAttribute("id")).equals("")) { %>
+                        	<li><a href="login.html" target="main">로그인</a></li>
+                     	    <li><a href="sign_up.html" target="main">회원가입</a></li>
+                        <% } else { %>
+                        	<li><a href="logout.jsp" target="">로그아웃</a></li>
+                        <% } %>
                     </ul>
                 </nav>
             </div>
@@ -104,7 +114,7 @@
                             <li>JEONG SEWOON</li>
                             <li>
                                 <ul>
-                                    <li><a href="aline_story.html" target="main">한줄얘기</a></li>
+                                    <li><a href="aline_story.jsp" target="main">한줄얘기</a></li>
                                     <li><a href="from_sewoon.html" target="main">세운이가</a></li>
                                     <li><a href="to_sewoon.html" target="main">세운에게</a></li>
                                 </ul>
