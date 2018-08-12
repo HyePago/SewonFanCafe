@@ -26,6 +26,16 @@ try {
 }
 
 // 글 저장
+String SQL = "INSERT INTO aline (username, nickname, text) VALUES (?, ?, ?);";
 
+pstmt = conn.prepareStatement(SQL);
+pstmt.setString(1, (String)session.getAttribute("id"));
+pstmt.setString(2, (String)session.getAttribute("nickname"));
+pstmt.setString(3, text);
 
+pstmt.executeUpdate();
+
+out.println("<script>");
+out.println("location.href='aline_story.jsp';");
+out.println("</script>");
 %>
