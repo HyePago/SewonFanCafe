@@ -1,0 +1,715 @@
+/* font */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Gamja+Flower');
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
+@import url('https://fonts.googleapis.com/css?family=Jua');
+@font-face {
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Anton'), url(http://themes.googleusercontent.com/static/fonts/anton/v3/5t8vP9Hx2udzw372glmOxA.ttf) format('truetype');
+}
+
+/* index.html - main */
+a {
+    text-decoration: none;
+    color: black;
+}
+.index_body {
+    font-family: 'Nanum Gothic';
+    background-image: url(../images/background.jpg);
+    padding: 0;
+    margin: 0;
+}
+.out_div {
+    width: 1000px;
+    margin: auto;
+}
+.main_view_div {
+    width: 1150px;
+    height: 1000px;
+    margin-bottom: 30px;
+    bottom: 20px;
+    margin: auto;
+    background-color: white;
+    border-radius: 30px;
+}
+
+/* main_header */
+#main_header {
+    background-image: url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    height: 300px;
+    margin: -20px;
+    margin-bottom: 0px;
+}
+
+/* main_navigation */
+nav {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+nav > ul {
+    list-style: none;
+}
+nav > ul > li {
+    display: inline;
+    padding: 20px 10px;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    text-shadow: 0.1px 0.1px 0.8px black;
+    -webkit-transition: font-size 2s, background-color 2s;
+}
+nav > ul > li > a:hover {
+    font-size: 15px;
+    color: dimgrey;
+}
+
+/* main_aside */
+aside#main_left {
+    float: left;
+    margin-top: 10px;
+}
+aside#main_left > div > ul {
+    list-style: none;
+    font-weight: bold;
+}
+.logo {
+    font-family: Anton ,'Nanum Brush Script', sans-serif, serif;
+    text-align: center;
+    margin-right: 33px;
+    font-size: 35px;
+    margin-top: -7px;
+    margin-bottom: 5px;
+    color: #EEDF89;
+    text-shadow: 0.1px 0.1px 0.8px black;
+}
+.introduce {
+    width: 200px;
+    border: 1px solid #E2B16A;
+    border-radius: 0.5em;
+    margin: 20px;
+    margin-left: 25px;
+}
+.introduce > ul > li > img {
+    border-radius: 8px;
+}
+tr.nickname {
+    font-weight: border;
+}
+.introduce_table tr th {
+    font-weight: bolder;
+    color: goldenrod;
+    font-size: 11px;
+}
+.td_btn {
+    padding-top: 9px;
+}
+.join_btn {
+    position: relative;
+    text-decoration: none;
+    margin-left: 4px;
+    width: 125px;
+    border: 1px solid rgb(46, 46, 46);
+    color: black;
+    padding: 3px 15px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: inset 0 -2px rgb(58, 58, 58);
+    box-shadow: inset 0 -2px rgb(84, 85, 85);
+    font-family: 'Do Hyeon';
+    border-radius: 5px;
+    background-color: #EEDF89;
+}
+.join_btn:hover {
+    background-color: #E2B16A;
+}
+.list > ul > li {
+    color: #E2B16A;
+}
+.list > ul > li > ul > li {
+    font-weight: normal;
+}
+.list > ul > li > ul > li > a {
+    color: black;
+    text-decoration: none;
+    padding: 0px 5px;
+    -webkit-transition: color 0.5s, background-color 0.5s, font-weight 0.5s;
+}
+.list > ul > li > ul > li > a:hover {
+    background-color: #EEDF89;
+    color: #EF8556;
+    font-weight: bold;
+}
+.main_audio {
+    width: 100px;
+    height: 50px;
+}
+
+/* main_section and article */
+section {
+    margin: auto;
+    text-align: center;
+}
+article {
+    margin: auto;
+    float: left;
+    width: 794px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+/* main_footer */
+footer {
+    clear: both;
+    height: 70px;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px 1px black;
+}
+.footer_manager {
+    width: 100%;
+    height: 50px;
+}
+.footer_manager a {
+    visibility: hidden;
+}
+.footer_manager:hover a {
+    visibility: visible;
+}
+
+/* join.html */
+.join_out_table {
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    margin: auto;
+    margin-top: 52px;
+    display: block;
+    padding-right: 50px;
+}
+.join_inner_table {
+    margin-top: 15px;
+}
+.join_inner_table th {
+    height: 35px;
+    font-size: 0.8em;
+    border-bottom: 1px solid #aaa;
+    padding-top: 6px;
+    padding-bottom: 7px;
+}
+.join_inner_table td {
+    padding-top: 6px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #aaa;
+}
+.join_inner_table input {
+    height: 22.1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    font-size: 0.7em;
+    border-color: #EF8556;
+    border-radius: 3px;
+    background-color: white;
+}
+.join_submit:hover {
+    background-color: #EEDF89;
+    font-weight: bold;
+}
+
+/* main_view */
+.notice_table {
+    width: 750px;
+    font-family: 'Yeon Sung' ,'Nanum Brush Script', sans-serif, serif;
+    margin-left: 10px;
+    margin-top: 30px;
+    font-size: 1em;
+}
+.table_logo {
+    font-family: 'Do Hyeon' ,'Nanum Brush Script', sans-serif, serif;
+    margin-right: 33px;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-top: -7px;
+    margin-bottom: 5px;
+    color: #EF8556;
+}
+.main_inner_table td {
+    padding: 10px 1px;
+    border-bottom: 1px solid #aaa;
+    width: 750px;
+}
+
+/* login */
+.login_out_table {
+    margin: auto;
+    margin-top: 52px;
+    display: block;
+    padding-right: 50px;
+}
+.login_inner_table {
+    margin: auto;
+    padding: 5px;
+}
+.login_inner_table td {
+    border-bottom: 0;
+}
+.login_input {
+    font-family: 'Yeon Sung' ,'Nanum Brush Script', sans-serif, serif;
+    width: 120px;
+    height: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+.login_find {
+    font-family: 'Nanum Gothic Coding';
+    font-size: 0.8em;
+}
+.login_find:hover {
+    background-color: #E2B16A;
+    color: white;
+}
+.login_submit {
+    font-family: 'Do Hyeon' ,'Nanum Brush Script', sans-serif, serif;
+    font-size: 1em;
+    background-color: #EEDF89;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin: auto;
+    margin-top: 10px;
+    outline: none;
+}
+.login_submit:hover {
+    background-color: rgb(224, 166, 141);
+}
+.login_submit:active {
+    background-color: #EF8556;
+}
+.login_logo {
+    font-family: 'Do Hyeon' ,'Nanum Brush Script', sans-serif, serif;
+    text-align: center;
+    margin-right: 33px;
+    font-size: 35px;
+    margin-top: -7px;
+    margin-bottom: 5px;
+    color: #EF8556;
+    margin-left: 45px;
+    margin-bottom: -5px;
+    -webkit-transition: transform 3s;
+}
+.login_logo:hover {
+    transform: perspective(500px) rotateY(350deg);
+}
+.login_blank {
+    margin-top: 50px;
+    padding-top: 10px;
+}
+
+/* notice */
+.notice_logo {
+    font-family: 'Do Hyeon' ,'Nanum Brush Script', sans-serif, serif;
+    font-size: 35px;
+    margin-top: -7px;
+    margin-bottom: 5px;
+    color: #EF8556;
+    margin-bottom: -5px;
+}
+.notice_inner_table {
+    text-align: left;
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    font-weight: lighter;
+}
+.notice_inner_table td:first-child {
+    font-family: 'Nanum Gothic Coding';
+    font-weight: bold;
+}
+.notice_inner_table td:last-child {
+    font-family: 'Nanum Gothic Coding';
+    font-weight: normal;
+}
+.notice_out_table {
+    margin: auto;
+    margin-top: 52px;
+    display: block;
+    padding-right: 50px;
+}
+.notice_out_table select {
+    font-family: 'Nanum Gothic Coding';
+    border-radius: 5px;
+    width: 80px;
+    height: 28px;
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-left: -40px;
+}
+.notice_out_table input {
+    font-family: 'Nanum Gothic Coding';
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.notice_submit {
+    font-family: 'Do Hyeon' ,'Nanum Brush Script', sans-serif, serif;
+    background-color: #EF8556;
+    color: white;
+    width: 60px;
+}
+.notice_inner_table td {
+    padding: 10px 1px;
+    border-bottom: 1px solid #aaa;
+}
+
+/* schedule */
+.schedule_table {
+    width: 750px;
+    margin: auto;
+    text-align: center;
+}
+.schedule_inner_table {
+    margin-top: 35px;
+    width: 750px;
+}
+.schedule_inner_table th {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+}
+.schedule_inner_table td {
+    text-align: left;
+    font-weight: lighter;
+    width: 115px;
+    height: 80px;
+    font-weight: bold;
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    vertical-align: top;
+}
+.schedule_logo {
+    font-family: 'Do Hyeon' ,'Nanum Brush Script', sans-serif, serif;
+    font-size: 1.5em;
+}
+.schedule_text {
+    font-size: 0.8em;
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    font-weight: lighter;
+}
+.today_schedule {
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    text-align: left;
+    font-size: 0.8em;
+}
+.today_schedule_td {
+    padding-top: 13px;
+}
+.today_schedule_span {
+    border: 1px solid #aaa;
+    padding: 6px 70px;
+}
+
+.aline_story_table {
+    margin: auto;
+    margin-top: 52px;
+    display: block;
+    padding-right: 50px;   
+}
+
+/* aline_story */
+.aline_story_submit {
+    width: 80px;
+    height: 50px;
+    vertical-align: top;
+    background-color: #EEDF89;
+    border-radius: 5px;
+    color: #555;
+    border: 1px solid #aaa;
+}
+
+/* official_impormation */
+.bread_img_1{
+    position: absolute;
+    border: 1px solid #aaa;
+    z-index: 0;
+    opacity: 0.5;
+} 
+.bread_img_1:hover {
+    z-index: 20;
+    opacity: 1;
+}
+.bread_img_2{
+    position: absolute;
+    border: 1px solid #aaa;
+    top: 190px;
+    left: 190px;
+    z-index: 10;
+    opacity: 0.5;
+} .bread_img_2:hover {
+    opacity: 1;
+    z-index: 50;
+}
+.bread_img_3{
+    position: absolute;
+    border: 1px solid #aaa;
+    top: 380px;
+    left: 380px;
+    z-index: 20;
+    opacity: 0.5;
+} 
+.bread_img_3:hover {
+    opacity: 1;
+    z-index: 50;
+}
+.impormation_logo{
+    font-family: 'Do Hyeon' ,'Nanum Brush Script', sans-serif, serif;
+    margin-right: 33px;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-top: -7px;
+    margin-bottom: 5px;
+    color: #EEDF89;
+}
+.impormation_inner_img {
+    border: 1px solid #aaa;
+    opacity: 0.5;
+}
+.impormation_inner_img:hover{
+    border: 1px solid #555;
+    opacity: 1;
+}
+.impormation_inner_text{
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.official_inner_table {
+    margin: auto;
+}
+.official_inner_table td {
+    padding-top: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* article */
+.article_img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #bbb;
+}
+.article_tr {
+    -webkit-transition: transform 3s;
+}
+.article_tr:hover {
+    background-color: rgb(236, 225, 160);
+    transform: scale(1.2, 1.2);
+}
+.acticle_table {
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+.article_td {
+    padding-top: 30px;
+    border-collapse: collapse;
+    border-color: #EEDF89;
+}
+.article_a {
+    text-decoration: none;
+    color: black;
+}
+.article_title {
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+}
+.article_log {
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    color: #666;
+    font-size: 0.7em;
+}
+.article_content {
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    font-size: 0.8em;
+}
+
+/* event */
+.event_table {
+    width: 700px;
+    height: 500px;
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    font-size: 0.85em;
+}
+.event_form {
+    width: 700px;
+    height: 100px;
+}
+.event_title {
+    color: #E2B16A;
+    font-weight: bold;
+    font-size: 1em;
+}
+.event_sub {
+    font-size: 0.7em;
+    color: #555;
+}
+.event_1 {
+    background-color: #EEDF89;
+    font-weight: bold;
+}
+
+/* from_sewoon */
+.from_sewoon_img {
+    width: 30px;
+    height: 30px;
+}
+
+/* to sewoon */
+.to_page {
+    text-decoration: underline;
+    font-size: 0.9em;
+    padding: 0 6px;
+} 
+.back_or_next {
+    text-decoration: none;
+    color: #333;
+}
+.page_span{
+    margin-left: 150px;
+}
+.to_out_table {
+    margin: auto;
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    margin-top: 52px;
+    display: block;
+    padding-right: 50px;
+    text-align: center;
+}
+.to_write {
+    border-radius: 5px;
+    background-color: #EF8556;
+    color: white;
+    width: 60px;
+    height: 30px;
+}
+.to_write:hover {
+    background-color: #E2B16A;
+    color: #555;
+}
+.to_inner_table {
+    margin-top: 15px;
+}
+.to_inner_table tr:nth-child(2n + 1){
+    background-color: #EEDF89;
+}
+.to_inner_table tr:first-child {
+    background-color: #E2B16A;
+    color: white;
+}
+.to_inner_table th {
+    height: 35px;
+    font-size: 0.8em;
+    padding-top: 6px;
+    padding-bottom: 7px;
+}
+.to_inner_table td {
+    padding-top: 6px;
+    padding-bottom: 7px;
+}
+.to_inner_table input {
+    height: 22.1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    font-size: 0.7em;
+    border-color: #EF8556;
+    border-radius: 3px;
+    background-color: white;
+}
+.to_inner_table td:nth-child(2):hover{
+    text-decoration: underline;
+}
+
+/* write */
+.write_title {
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    font-weight: bold;
+    width: 700px;
+    height: 50px;
+    padding-left: 15px;  
+    font-size: 1.3em;
+    border: 1px solid #bbb;
+    margin-top: 20px;
+}
+.write_content {
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    padding-left: 10px;
+    font-size: 1em;
+    padding-top: 5px;
+}
+.write_btn {
+    width: 80px;
+    height: 40px;
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    font-size: 0.8em;
+    background-color: #EEDF89;
+    border: 1px solid #bbb;
+    padding: 10px 25px;
+}
+.write_btn:hover {
+    background-color: #E2B16A;
+    color: wheat;
+}
+
+/* writting */
+.writting_title {
+    color: #E2B16A;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.writting_sub {
+    color: #555;
+    font-size: 1.1em;
+}
+.writting_impormaiton {
+    font-size: 1em;
+    color: #333;
+    padding-top: 10px;
+}
+.writting_content {
+    font-size: 1.2em;
+    color: black;
+    padding-top: 20px;
+}
+.writting_comment {
+    color: red;
+    text-decoration: underline;
+}
+.writting_comment_name {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+.writting_tr {
+    vertical-align: top;
+}
+.comment_submit {
+    width: 80px;
+    background-color: #EEDF89;
+    height: 50px;
+}
+
+/* mamanger_Form */
+.manager_Form_inner_table {
+    font-family: 'Nanum Gothic Coding' ,'Nanum Brush Script', sans-serif, serif;
+    font-size: 1em;
+}
+.mamanger_Form_a:hover {
+    text-decoration: underline;
+}
