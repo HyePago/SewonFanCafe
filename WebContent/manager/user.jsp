@@ -15,13 +15,9 @@
         <link rel="stylesheet" href="../css/mystyle.css">
     </head>
     <body>
-    	<script>
-    		function delete() {
-    			
-    		}
-    	</script>
     	<%
     	String SQL = null;
+    	String username = null;
     	
     	// 데이터 베이스 연결
     	Connection conn = null;
@@ -69,7 +65,8 @@
                                     				<tr>
 														<td><%= rs.getString("username") %></td>
 														<td><%= rs.getString("nickname") %></td>
-														<td><input type="button" value="삭제"  class="notice_submit" onclick=""></td>
+														<% username = rs.getString("username"); %>
+														<td><input type="button" value="삭제"  class="notice_submit" onclick="delete_user();"></td>
                                     				</tr>
                                     			<%
                                     		}
@@ -88,4 +85,9 @@
             </table>
         </form>
     </body>
+    <script>
+    	function delete_user() {
+    		location.href = "user/delete.jsp?username="+<%=username%>;
+    	}
+    </script>
 </html>
