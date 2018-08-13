@@ -77,12 +77,12 @@
                     					<table>
                     						<tr>
                     							<td></td>
-                    							<td><%= rs.getString("nickname") %></td>
+                    							<td style="font-weight: bold;"><%= rs.getString("nickname") %></td>
                     						</tr>
                     						<tr>
                     							<td></td>
                     							<td>
-                    								<%= rs.getString("text") %>
+                    								<%= rs.getString("text").replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>") %>
                     							</td>
                     						</tr>
                     					</table>

@@ -116,7 +116,7 @@
                                 <ul>
                                     <li><a href="aline_story.jsp" target="main">한줄얘기</a></li>
                                     <li><a href="from_sewoon.html" target="main">세운이가</a></li>
-                                    <li><a href="to_sewoon.html" target="main">세운에게</a></li>
+                                    <li><a href="to_sewoon.jsp?page=1" target="main">세운에게</a></li>
                                 </ul>
                             </li>
                         </ul>
