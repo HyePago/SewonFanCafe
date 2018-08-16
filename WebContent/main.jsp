@@ -1,3 +1,7 @@
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!Doctype html>
@@ -11,6 +15,24 @@
         <link rel="stylesheet" href="css/mystyle.css">
     </head>
     <body>
+    <%
+    	String SQL = null;	
+    
+	  	//데이터 베이스 연결
+	    Connection conn = null;
+	    PreparedStatement pstmt = null;
+	    ResultSet rs = null;
+	
+	    try {
+	    	String dbURL = "jdbc:mysql://localhost:3306/sewonfancafe";
+	    	String dbID = "root";
+	    	String dbPassword = "1234";
+	    	Class.forName("com.mysql.jdbc.Driver");
+	    	conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
+	    } catch(Exception e) {
+	    	e.printStackTrace();
+	    }
+    %>
         <iframe name="main_youtube" width=100% height="500px" style="border: none" src="https://www.youtube.com/embed/3cfkrMG3vFQ" align="right">
         </iframe>
         <table class="notice_table">
@@ -23,15 +45,25 @@
             <tr>
                 <td>
                     <table class="main_inner_table">
-                        <tr>
-                            <td><a href="https://www.youtube.com/watch?v=e7rL1MX9xKo">[MV] 정세운 - BABY IT'S U (Prod. 키겐, earattack)</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="writing/starship.html">스타쉽 엔터테이먼트 입니다.</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="writing/notice.html">정세운 공식 팬카페 게시판 통합 공지 [180607 ver.]</a></td>
-                        </tr>
+                    	<%
+                    		try {
+                    			SQL = "SELECT * FROM notice ORDER BY timestamp DESC LIMIT 3";
+                    		
+                    			pstmt = conn.prepareStatement(SQL);
+                    			
+                    			rs = pstmt.executeQuery();
+                    			
+                    			while(rs.next()){
+                    				%>
+                    					<tr>
+                    						<td><a href="notice_view.jsp?id=<%= rs.getString("id") %>"><%= rs.getString("title") %></a></td>
+                    					</tr>
+                    				<%
+                    			}
+                    		} catch(Exception e) {
+                    			e.printStackTrace();
+                    		}
+                    	%>
                     </table>
                 </td>
             </tr>
@@ -46,18 +78,25 @@
             <tr>
                 <td>
                     <table class="main_inner_table">
-                        <tr>
-                            <td><a href="writing/member.html">우수 회원 등업</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="writing/bom.html">[ 봄별, 봄별 세운 ]</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="writing/kakao.html">카톡 테마 투표 결과</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="writing/melon.html">멜론 아이디 만들기 시작합니다.</a></td>
-                        </tr>
+                    	<%
+                    		try {
+                    			SQL = "SELECT * FROM to_sewoon ORDER BY timestamp DESC LIMIT 3";
+                    		
+                    			pstmt = conn.prepareStatement(SQL);
+                    			
+                    			rs = pstmt.executeQuery();
+                    			
+                    			while(rs.next()){
+                    				%>
+                    					<tr>
+                    						<td><a href="to_sewoon_view.jsp?id=<%= rs.getString("id") %>"><%= rs.getString("title") %></a></td>
+                    					</tr>
+                    				<%
+                    			}
+                    		} catch(Exception e) {
+                    			e.printStackTrace();
+                    		}
+                    	%>
                     </table>
                 </td>
             </tr>

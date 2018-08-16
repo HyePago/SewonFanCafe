@@ -35,6 +35,18 @@
 	    	} catch(Exception e) {
 	    		e.printStackTrace();
 	    	}
+	    	
+	    	// views 1 늘리기
+	    	try {
+	    		SQL = "UPDATE to_sewoon SET views = views + 1 WHERE id = ?";
+	    		
+	    		pstmt = conn.prepareStatement(SQL);
+	    		pstmt.setString(1, id);
+	    		
+	    		pstmt.executeUpdate();
+	    	} catch(Exception e) {
+	    		e.printStackTrace();
+	    	}
     	%>
         <form action="joinProc.jsp" method="post" class="event_form">
             <table class="event_table">

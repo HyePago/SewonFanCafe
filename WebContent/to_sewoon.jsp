@@ -115,8 +115,6 @@
                         </td>
                     </tr>
                     <tr>
-                    	
-                    
                         <td style="text-align:left">
                             <input type="submit" value="글쓰기" class="to_write">
                             

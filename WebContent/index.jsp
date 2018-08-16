@@ -101,8 +101,8 @@
                             <li>OFFICIAL</li>
                             <li>
                                 <ul>
-                                    <li><a href="notice.html" target="main">통합공지</a></li>
-                                    <li><a href="schedule.html" target="main">스케줄방</a></li>
+                                    <li><a href="notice.jsp?page=1" target="main">통합공지</a></li>
+                                    <li><a href="schedule.jsp?month=8" target="main">스케줄방</a></li>
                                     <li><a href="broadcast.html" target="main">공방공지</a></li>
                                     <li><a href="official_impormation.html" target="main">공식자료</a></li>
                                     <li><a href="article.html" target="main">기사정보</a></li>
@@ -115,7 +115,7 @@
                             <li>
                                 <ul>
                                     <li><a href="aline_story.jsp" target="main">한줄얘기</a></li>
-                                    <li><a href="from_sewoon.html" target="main">세운이가</a></li>
+                                    <li><a href="from_sewoon.jsp?page=1" target="main">세운이가</a></li>
                                     <li><a href="to_sewoon.jsp?page=1" target="main">세운에게</a></li>
                                 </ul>
                             </li>

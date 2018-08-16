@@ -66,7 +66,7 @@
 														<td><%= rs.getString("username") %></td>
 														<td><%= rs.getString("nickname") %></td>
 														<% username = rs.getString("username"); %>
-														<td><input type="button" value="삭제"  class="notice_submit" onclick="delete_user();"></td>
+														<td><input type="button" value="삭제"  class="notice_submit" onclick="javascript:delete_user('<%= username %>')"></td>
                                     				</tr>
                                     			<%
                                     		}
@@ -86,8 +86,8 @@
         </form>
     </body>
     <script>
-    	function delete_user() {
-    		location.href = "user/delete.jsp?username="+<%=username%>;
+    	function delete_user(username) {
+    		location.href = "user/delete.jsp?username="+username;
     	}
     </script>
 </html>

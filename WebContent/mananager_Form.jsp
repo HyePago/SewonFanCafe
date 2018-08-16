@@ -12,11 +12,15 @@
     </head>
     <body>
     	<%
+    		session.invalidate();
+    	
     		// 매니저 아이디와 비밀번호 확인
     		String username = request.getParameter("username");
     		String password = request.getParameter("password");
     		
-    		if(!(username.equals("hyejin") && password.endsWith("1234"))){
+			if(username.equals("sewoon") && password.equals("1234")) {
+				out.print("<script>location.href='sewoon.jsp?page=1';</script>");
+			} else if(!(username.equals("hyejin") && password.equals("1234"))){
     			out.print("<script>history.go(-1);</script>");
     		}
     	%>
@@ -37,7 +41,10 @@
                                         <td><a href="manager/user.jsp" class="mamanger_Form_a">회원관리</td>
                                     </tr>
                                     <tr>
-                                        <td><a href="manager/notice.jsp" class="mamanger_Form_a">통합공지 관리</a></td>
+                                        <td><a href="manager/notice.jsp?page=1" class="mamanger_Form_a">통합공지 관리</a></td>
+                                    </tr>
+                                    <tr>
+                                    	<td><a href="manager/schedule.jsp" class="manager_Form_a">스케쥴</a></td>
                                     </tr>
                                 </tbody>
                             </table>
