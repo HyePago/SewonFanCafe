@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,7 +6,15 @@
 </head>
 <body>
 	<form action="insert.jsp" method="post">
-		
+		<input type="date" name="date" min="2018-01-01" max="2018-12-31" required /> <br>
+		구분
+		<select name="division">
+			<option value="방송">방송</option>
+		</select> <br>
+		채널 <input type="text" name="channel"><br>
+		내용 <input type="text" name="title"><br>
+		시간 <input type="text" name="time"><br>
+		<input type="submit" value="저장" /> <a href="history.go(-1)">취소</a>
 	</form>
 </body>
 </html>
