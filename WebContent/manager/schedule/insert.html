@@ -6,15 +6,29 @@
 </head>
 <body>
 	<form action="insert.jsp" method="post">
-		<input type="date" name="date" min="2018-01-01" max="2018-12-31" required /> <br>
+		<br>
 		구분
-		<select name="division">
-			<option value="방송">방송</option>
-		</select> <br>
+		 <br>
 		채널 <input type="text" name="channel"><br>
 		내용 <input type="text" name="title"><br>
 		시간 <input type="text" name="time"><br>
 		<input type="submit" value="저장" /> <a href="history.go(-1)">취소</a>
+		
+		<table>
+			<tr>
+				<td><input type="date" name="date" min="2018-01-01" max="2018-12-31" required /></td>
+			</tr>
+			<tr>
+				<td>
+					<select name="division">
+						<option value="방송">방송</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				
+			</tr>
+		</table>
 	</form>
 </body>
 </html>
